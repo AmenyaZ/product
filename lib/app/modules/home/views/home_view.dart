@@ -17,6 +17,16 @@ class HomeView extends GetView<HomeController> {
     final Brightness systemBrightness =
         MediaQuery.of(context).platformBrightness;
     final isDarkMode = systemBrightness == Brightness.dark;
+    print("===========================${controller.numberValue}");
+
+    if(Get.arguments != null){
+      controller.numberValue.value = Get.arguments;
+      if (controller.numberValue != 0) {
+        controller.currentIndex.value = controller.numberValue.value;
+        controller.numberValue.value = 0;
+      }
+    }
+
     return Scaffold(
       body: Obx(() => _buildRoute(controller.currentIndex.value)),
       bottomNavigationBar: Obx(
@@ -35,13 +45,13 @@ class HomeView extends GetView<HomeController> {
               label: 'Dashboard',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.note_alt_outlined),
-              label: 'Reports',
+              icon: Icon(Icons.car_rental),
+              label: 'Products',
             ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.monitor_heart_outlined),
-              label: 'My Activity',
-            ),
+            // BottomNavigationBarItem(
+            //   icon: Icon(Icons.monitor_heart_outlined),
+            //   label: 'My Activity',
+            // ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person_outline),
               label: 'Profile',

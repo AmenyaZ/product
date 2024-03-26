@@ -18,7 +18,7 @@ Widget appBar(TransacionDetailController controller) {
           size: 30.0,
           color: Colors.indigo, // Set the size of the icon
         ),
-        title: const Text('Transacion Detail'),
+        title: const Text('Inventory'),
         centerTitle: true,
         actions: [
           // Stack(

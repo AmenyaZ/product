@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:products/app/modules/transacion_detail/controllers/transacion_detail_controller.dart';
+import 'package:products/app/theme/colors.dart';
 
 Widget mainBody(TransacionDetailController controller, BuildContext context) {
   return Obx(() {
@@ -82,8 +83,10 @@ Widget mainBody(TransacionDetailController controller, BuildContext context) {
                       Expanded(
                         child: Center(
                             child: Image.asset(
-                          'assets/tire.png',
-                          height: 50,
+                          // 'assets/tire.png',
+                          'assets/images/car-large.png',
+                          // height: 20,
+                              scale: 1.1,
                         )),
                       ),
                       Text(
@@ -151,7 +154,7 @@ Widget mainBody(TransacionDetailController controller, BuildContext context) {
                         },
                         style: ElevatedButton.styleFrom(
                           foregroundColor: Colors.white,
-                          backgroundColor: Colors.green,
+                          backgroundColor: CustomColors.primaryColor,
                           // Set the text color
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(

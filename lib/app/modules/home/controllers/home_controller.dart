@@ -5,6 +5,7 @@ class HomeController extends GetxController {
 
   final count = 0.obs;
   var currentIndex = 0.obs;
+  var numberValue = 0.obs;
 
   @override
   void onInit() {

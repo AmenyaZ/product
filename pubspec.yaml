@@ -10,6 +10,7 @@ dependencies:
   get: 4.6.6
   shared_preferences: ^2.1.0
   path_provider: ^2.0.15
+  fluttertoast: ^8.2.4
   flutter: 
     sdk: flutter
 
@@ -25,4 +26,7 @@ flutter:
     - assets/categories.json
     - assets/products.json
     - assets/tire.png
+    - assets/images/
+
+
 
