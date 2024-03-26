@@ -129,7 +129,7 @@ Widget mainBody(TransacionDetailController controller, BuildContext context) {
                         padding: EdgeInsets.all(10.0),
                         child: Center(
                           child: Text(
-                            "${product[itemIndex]?.cartValue ??0}",
+                            "${product[itemIndex]?.cartValue ?? 0}",
                             style: TextStyle(
                               // fontSize: 16.0,
                               fontWeight: FontWeight.bold,
@@ -138,18 +138,20 @@ Widget mainBody(TransacionDetailController controller, BuildContext context) {
                         ),
                       ),
                       ElevatedButton(
-                        onPressed: (){
+                        onPressed: () {
                           var indexToIncrease = itemIndex;
-                          var newValue = (product[indexToIncrease]?.cartValue ?? 0) + 1;
-                          controller.productsListtData.value[indexToIncrease]?.cartValue = newValue;
+                          var newValue =
+                              (product[indexToIncrease]?.cartValue ?? 0) + 1;
+                          controller.productsListtData.value[indexToIncrease]
+                              ?.cartValue = newValue;
                           controller.updateCartValue(itemIndex, newValue);
                           // controller.fetchProducts();
-                          print("========new Value=====${controller.productsListtData.value[indexToIncrease]?.cartValue}");
+                          print(
+                              "========new Value=====${controller.productsListtData.value[indexToIncrease]?.cartValue}");
                         },
                         style: ElevatedButton.styleFrom(
-                          primary: Colors.green,
-                          // Set the button background color
-                          onPrimary: Colors.white,
+                          foregroundColor: Colors.white,
+                          backgroundColor: Colors.green,
                           // Set the text color
                           shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(
