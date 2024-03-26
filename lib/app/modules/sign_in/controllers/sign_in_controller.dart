@@ -1,6 +1,8 @@
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
+
 class SignInController extends GetxController {
   //TODO: Implement SignInController
 
@@ -16,6 +18,12 @@ class SignInController extends GetxController {
   @override
   void onReady() {
     super.onReady();
+  }
+  void navigatetoHome() {
+    Get.offAllNamed(Routes.HOME);
+  }
+  void navigatetoSignUp() {
+    Get.offAllNamed(Routes.SIGN_UP);
   }
 
   @override

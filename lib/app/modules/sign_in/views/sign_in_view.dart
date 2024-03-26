@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../../configs/constants.dart';
+import '../../../util/custombutton.dart';
 import '../../../util/customtext.dart';
 import '../../../util/customtextfield.dart';
 import '../controllers/sign_in_controller.dart';
@@ -107,12 +108,7 @@ class SignInView extends GetView<SignInController> {
                   child: ElevatedButton(
                     onPressed: () {
                       // Navigate to registration screen
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => RegistrationScreen(),
-                        ),
-                      );
+                      controller.navigatetoHome();
                     },
                     child: Text('Create an account'),
                   ),

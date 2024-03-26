@@ -4,6 +4,8 @@ class HomeController extends GetxController {
   //TODO: Implement HomeController
 
   final count = 0.obs;
+  var currentIndex = 0.obs;
+
   @override
   void onInit() {
     super.onInit();
@@ -17,6 +19,9 @@ class HomeController extends GetxController {
   @override
   void onClose() {
     super.onClose();
+  }
+  void changeTabIndex(int index) {
+    currentIndex.value = index;
   }
 
   void increment() => count.value++;

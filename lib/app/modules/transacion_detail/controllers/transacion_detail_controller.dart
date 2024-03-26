@@ -9,6 +9,7 @@ import 'package:products/app/data/res/categoriesData.dart';
 import 'package:products/app/data/res/productsData.dart';
 
 import '../../../data/provider/data_provider.dart';
+import '../../../routes/app_pages.dart';
 
 class TransacionDetailController extends BaseController {
   //TODO: Implement TransacionDetailController
@@ -65,6 +66,8 @@ class TransacionDetailController extends BaseController {
       print("=======brandListData==${brandListData.value}");
     }
   }
+
+
 
   // Future<void> fetchBrands() async {
   //   final data = await DataService().fetchData("brands");
